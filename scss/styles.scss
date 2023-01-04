@@ -1,58 +1,17 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
-    Description: This file contains all the styles associated with the page
-    that don't come from third party libraries. This file gets compiled using
-    Gulp and send to the /css folder which is then loaded on the page.
-*/
-/*
-    File Contents:
-
-        1. Variables
-        2. Mixins
-        3. Global Styles
-        4. Lead Styles
-        5. About Styles
-        6. Experience Styles
-        7. Education Styles
-        8. Project Styles
-        9. Skills Styles
-        10. Contact Styles
-        11. Optional Section Styles
-        12. Media Queries
-*/
-
-/*
-    ------------------------
-    ----- 1. Variables -----
-    ------------------------
-*/
-
-// Define base and accent colors
 $base-color: #3498db;
 $base-color-hover: darken($base-color, 10%);
 
-// Define background colors
+
 $background: #fff;
 $background-alt: #f2f2f5;
 
-// Define border colors
+
 $border: #dcd9d9;
 
-// Define text colors
+
 $heading: #374054;
 $text: #74808a;
 
-/*
-    ---------------------
-    ----- 2. Mixins -----
-    ---------------------
-*/
 
 @mixin transition($duration: 0.5s, $func: ease, $property: all) {
     transition: #{$duration} #{$func} #{$property};
@@ -78,11 +37,6 @@ $text: #74808a;
     }
 }
 
-/*
-    ----------------------------
-    ----- 3. Global Styles -----
-    ----------------------------
-*/
 
 body {
     font-family: 'Lato', sans-serif;
@@ -94,10 +48,10 @@ body {
     }
 }
 
-// No JS styles
+
 .no-js {
     #experience-timeline {
-        > div {
+        >div {
             background: $background;
             padding: 10px;
             margin-bottom: 10px;
@@ -125,19 +79,21 @@ body {
             }
         }
 
-        &:before, &:after {
+        &:before,
+        &:after {
             content: none;
         }
     }
 }
 
 @keyframes dropHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -259,7 +215,7 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($text, 25%);
-        text-align:center;
+        text-align: center;
     }
 
     i {
@@ -308,11 +264,11 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .shadow-large {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
@@ -339,11 +295,6 @@ footer {
     background: $background-alt;
 }
 
-/*
-    --------------------------
-    ----- 4. Lead Styles -----
-    --------------------------
-*/
 
 #lead {
     position: relative;
@@ -364,7 +315,8 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    h1, h2 {
+    h1,
+    h2 {
         margin: 0;
     }
 
@@ -415,13 +367,14 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($base-color, 25%);
-        text-align:center;
+        text-align: center;
     }
 
     i {
         animation: pulsate 1.5s ease;
         animation-iteration-count: infinite;
-        padding-top: 5px;;
+        padding-top: 5px;
+        ;
     }
 }
 
@@ -439,11 +392,6 @@ footer {
     }
 }
 
-/*
-    ---------------------------
-    ----- 5. About Styles -----
-    ---------------------------
-*/
 
 #about {
     padding: 75px 15px;
@@ -458,12 +406,6 @@ footer {
         margin: 0;
     }
 }
-
-/*
-    --------------------------------
-    ----- 6. Experience Styles -----
-    --------------------------------
-*/
 
 #experience {
     padding: 50px 15px;
@@ -570,11 +512,6 @@ footer {
     color: #374054;
 }
 
-/*
-    -------------------------------
-    ----- 7. Education Styles -----
-    -------------------------------
-*/
 
 #education {
     padding: 50px 15px 20px 15px;
@@ -613,7 +550,8 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p, ul {
+    p,
+    ul {
         margin: 0;
         color: $text;
         font-size: 0.9em;
@@ -624,11 +562,6 @@ footer {
     }
 }
 
-/*
-    -------------------------------
-    ----- 8. Project Styles -----
-    -------------------------------
-*/
 
 #projects {
     padding: 50px 15px;
@@ -688,11 +621,6 @@ footer {
     display: none;
 }
 
-/*
-    -------------------------------
-    ----- 9. Skills Styles -----
-    -------------------------------
-*/
 
 #skills {
     padding: 50px 15px;
@@ -722,11 +650,6 @@ footer {
     }
 }
 
-/*
-    -------------------------------
-    ----- 10. Contact Styles -----
-    -------------------------------
-*/
 
 #contact {
     padding: 50px 15px;
@@ -744,7 +667,8 @@ footer {
     max-width: 500px;
     margin: 0 auto;
 
-    input, textarea {
+    input,
+    textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -754,6 +678,7 @@ footer {
         background: darken($base-color, 15%);
         color: #fff;
         @include transition();
+
         @include placeholder {
             color: #fff;
         }
@@ -778,20 +703,15 @@ footer {
         border: none;
         color: $base-color;
         font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         @include transition();
 
         &:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
     }
 }
 
-/*
-    ---------------------------------------
-    ----- 11. Optional Section Styles -----
-    ---------------------------------------
-*/
 
 .optional-section {
     padding: 50px 15px;
@@ -824,7 +744,8 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p, ul {
+    p,
+    ul {
         margin: 0 0 15px 0;
         color: $text;
         font-size: 0.9em;
@@ -835,17 +756,12 @@ footer {
     }
 }
 
-/*
-    -----------------------------
-    ----- 12. Media Queries -----
-    -----------------------------
-*/
-
-// Collapse timeline
 @media only screen and (max-width: 750px) {
 
     #experience-timeline {
-        &:before, &:after {
+
+        &:before,
+        &:after {
             left: 23px;
         }
 
@@ -917,7 +833,8 @@ footer {
         height: 100%;
     }
 
-    #mobile-menu-open, #mobile-menu-close {
+    #mobile-menu-open,
+    #mobile-menu-close {
         display: block;
     }
 
@@ -953,7 +870,9 @@ footer {
     }
 
     .education-block {
-        h3, span {
+
+        h3,
+        span {
             float: none;
         }
     }
@@ -980,7 +899,7 @@ footer {
 
 }
 
-// Extra Small Devices
+
 @media only screen and (max-width : 480px) {
 
     #lead-content {
